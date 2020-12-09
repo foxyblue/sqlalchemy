@@ -1468,7 +1468,7 @@ class Enum(Emulated, String, SchemaType):
             _expect_unicode = convert_unicode
 
         if self.enums:
-            length = max(len(x) for x in self.enums)
+            length = max(len(x) for x in self.enums if x)
         else:
             length = 0
         if not self.native_enum and length_arg is not NO_ARG:
